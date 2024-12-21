@@ -1,0 +1,333 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Light Green */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #388e3c; /* Green */
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    max-height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-right: 1rem;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    line-height: 1.3;
+    letter-spacing: 1.6px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #1b5e20; /* Dark Green */
+    padding: 1rem 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #388e3c; /* Light Green */
+    transform: translateY(-5px); /* Slight movement */
+}
+
+/* Add underline animation */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #388e3c;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full underline */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    flex-grow: 1; /* Allow main to take up available space */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+/* Main Content Styling */
+main > div {
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: #388e3c;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Search Section */
+.search-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #388e3c;
+}
+
+.search-form {
+    color: #388e3c;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-form h2 {
+    font-size: 24px;
+    color: #388e3c;
+    text-align: center;
+}
+
+.form-fields label {
+    font-size: 16px;
+    color: #388e3c;
+}
+
+.form-fields select, 
+.form-fields input {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.search-btn {
+    background-color: #388e3c; /* Green */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.search-btn:hover {
+    background-color: #1b5e20; /* Dark Green */
+}
+
+/* Results Section */
+.instructions-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-container h2 {
+    font-size: 24px;
+    color: #388e3c;
+    text-align: center;
+}
+
+.instructions-container p {
+    font-size: 16px;
+    color: #388e3c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blood-bank {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blood-bank h3 {
+    font-size: 20px;
+    color: #388e3c; /* Green */
+}
+
+.blood-bank p {
+    font-size: 14px;
+    color: #555;
+}
+
+.blood-bank strong {
+    color: #333;
+}
+
+.blood-bank + .blood-bank {
+    margin-top: 15px;
+}
+
+/* Hover effect on dynamic divs */
+.dynamic-div:hover {
+    background-color: #388e3c; /* Green background on hover */
+    color: #fff; /* White text on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.f {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 20px; 
+}
+
+.mainf{
+    background-color: rgb(36, 40, 41);
+}
+
+footer {
+    background-color: #388e3c;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative; /* Default position, but will be controlled by flexbox */
+}
+
+.f1 {
+    width: 20%; 
+    margin-top: 10px;
+    margin-left: 4%;
+}
+
+.f1 h3 {
+    margin-bottom: 10px; 
+    color: rgb(255, 255, 255); 
+}
+
+.f1 p {
+    margin: 5px 0;
+    font-size: 14px; 
+    color: rgb(255, 255, 255);
+} 
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images img {
+    height: auto;
+}
+
+#img1{
+    width: 250px;
+}
+#img2, #img4, #img5 {
+    width: 120px;
+}
+
+#img3 {
+    width: 60px;
+    height: 60px;
+}
+
+.Last{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.flink:hover{
+    text-decoration: underline;
+}
+
+.Llink{
+    color: #fff;
+    text-decoration: none;
+}
+.Llink:hover{
+    text-decoration: underline;
+}

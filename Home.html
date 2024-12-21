@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFE FLOW</title>
+    <link rel="icon" href="assets/Blood_Bank_Favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+    <link href="Home.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo">
+            <div class="header-text">
+                <h1>Life Flow: Saving Lives Together</h1>
+                <h1 lang="hi">जीवन की धारा: मिलकर जीवन बचाना</h1> <!-- Hindi added with lang attribute -->
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="#">Looking For Blood</a></li>
+            <li><a href="#">Want to Donate Blood</a></li>
+        </ul>
+    </nav>
+    <br/>
+    <main>
+        <section class="stats">
+            <div class="box-container">
+                <div class="box left">
+                    <p class="big-number">0</p>
+                    <p>Donors Registered</p>
+                </div>
+                <div class="box right">
+                    <p class="big-number">0</p>
+                    <p>Blood Units Collected</p>
+                </div>
+            </div>
+            <div class="last-update">
+                <span>Data from 20 DEC 2024 onwards:</span> Last update: 2024-12-20 14:22:09
+            </div>
+        </section>
+        
+        <section class="links">
+            <div class="link-item"><a href="Blood_Availability_Search.html">Blood Availability Search</a></div>
+            <div class="link-item"><a href="Blood_Bank_Directory.html">Blood Bank Directory</a></div>
+            <div class="link-item"><a href="#">Blood Donation Camps</a></div>
+            <div class="link-item"><a href="#">Donor Login</a></div>
+            <div class="link-item"><a href="#">Register Voluntary Blood Camp</a></div>
+        </section>
+
+        <section class="donation-info">
+            <div class="info-box">
+                <h2>Learn About Donation</h2>
+                <div class="Donation-info-box">
+                    <img src="assets/Learn_About_Donation.jpeg" alt="Blood donation" id="Learn_About_Donation">
+                    <p>The process of donating blood is a safe and simple way to help others in need. Blood donation not only saves lives but also supports the community by ensuring a steady supply for hospitals and clinics. After donation, your body works to replenish the blood, stimulating the production of fresh blood cells and promoting good health. It's an act of kindness that can make a real difference in someone's life.</p>
+                </div>
+            </div>            
+
+            <div class="info-box">
+                <h2>Compatible Blood Type Donors</h2>
+                <table>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Donate Blood to</th>
+                        <th>Receive Blood From</th>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>A+, AB+</td>
+                        <td>A+, A-, O+, O-</td>
+                    </tr>
+                    <tr>
+                        <td>O+</td>
+                        <td>O+, A+, B+, AB+</td>
+                        <td>O+, O-</td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>
+                        <td>B+, AB+</td>
+                        <td>B+, B-, O+, O-</td>
+                    </tr>
+                    <tr>
+                        <td>AB+</td>
+                        <td>AB+</td>
+                        <td>All blood types</td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>
+                        <td>A+, A-, AB+, AB-</td>
+                        <td>A-, O-</td>
+                    </tr>
+                    <tr>
+                        <td>O-</td>
+                        <td>All blood types</td>
+                        <td>O-</td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>
+                        <td>B+, B-, AB+, AB-</td>
+                        <td>B-, O-</td>
+                    </tr>
+                    <tr>
+                        <td>AB-</td>
+                        <td>AB+, AB-</td>
+                        <td>All blood types except AB+</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="info-box">
+                <div class="section-header"><p>TYPES OF DONATION</p></div>
+                <div class="section-description">
+                    <p>The average human body contains about five liters of blood, which is made of several cellular and non-cellular components such as <strong>blood cell, Platelet, and Plasma.</strong></p>
+                    <p>Each type of component has its unique properties and can be used for different indications. The donated blood is separated into these components by the blood centre and one donated unit can save upto four lives depending on the number of components separated from your blood.</p>
+                </div>
+                <div>
+                    <ul id="donationList">
+                        <li>Packed Red Blood Cells</li>
+                        <li>Plasma</li>
+                        <li>Platelet</li>
+                    </ul>
+                    <fieldset>
+                        <div class="WhatIsIt">
+                            <div class="What Is It">What Is It?</div>
+                            <div class="info-description">Information about what it is...</div>
+                        </div>
+                        <div class="WhoCanDonate">
+                            <div class="info-name">Who Can Donate?</div>
+                            <div class="info-description">Information about who can donate...</div>
+                        </div>
+                        <div class="UserFor">
+                            <div class="info-name">User For</div>
+                            <div class="info-description">Information about who uses it...</div>
+                        </div>
+                        <div class="LastsFor">
+                            <div class="info-name">Lasts For</div>
+                            <div class="info-description">Information about how long it lasts...</div>
+                        </div>
+                        <div class="HowLongDoesItTakeToDonate">
+                            <div class="info-name">How Long Does It Take To Donate?</div>
+                            <div class="info-description">Information about how long the donation process takes...</div>
+                        </div>
+                        <div class="HowOftenCanIDonate">
+                            <div class="info-name">How Often Can I Donate?</div>
+                            <div class="info-description">Information about donation frequency...</div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>           
+    </main>
+    <br/>
+    <footer>
+        
+        <div class="mainf">
+            <div class="f">
+                <div class="f1">
+                    <h3>Looking for Blood</h3>
+                    <p><a href="#" class="flink">Blood Availability</a></p>
+                    <p><a href="#" class="flink">Blood Bank Directory</a></p>
+                    <p><a href="#" class="flink">Thalassemia Request</a></p>
+                </div>
+                <div class="f1">
+                    <h3>Want to Donate Blood</h3>
+                    <p><a href="#" class="flink">Blood Donation Camps</a></p>
+                    <p><a href="#" class="flink">Donor Login</a></p>
+                </div>
+                <div class="f1">
+                    <h3>Blood Bank Login</h3>
+                    <p><a href="#" class="flink">Login</a></p>
+                    <p><a href="#" class="flink">Add your Blood Bank</a></p>
+                </div>
+                <div class="f1">
+                    <h3>About Us</h3>
+                    <p><a href="#" class="flink">Notifications</a></p>
+                    <p><a href="#" class="flink">Know about Us</a></p>
+                    <p><a href="#" class="flink">Contact Us</a></p>
+                </div>
+            </div>
+            <div class="images">
+                <img id="img1" src="assets/footer1.png" alt="initiative">
+                <img id="img2" src="assets/footer2.png" alt="2nd">
+                <img id="img3" src="assets/footer3.jpg" alt="3rd">
+                <img id="img4" src="assets/footer4.png" alt="4th">
+                <img id="img5" src="assets/footer5.png" alt="5th">
+            </div>
+            <div class="Last">
+                <a class="Llink" href="#">Terms & Conditions</a> | <a class="Llink" href="#">Privacy Policy</a> | <a class="Llink" href="#">Accessibility Statement</a> | Last Updated : Dec 20 2024 | <a class="Llink" href="#">Site Map</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
