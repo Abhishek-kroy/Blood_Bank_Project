@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Directory</title>
+    <link rel="icon" href="assets/Blood_Bank_Favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="Blood_Bank_Directory.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo">
+            <div class="header-text">
+                <h1>Life Flow: Saving Lives Together</h1>
+                <h1 lang="hi">जीवन की धारा: मिलकर जीवन बचाना</h1> <!-- Hindi added with lang attribute -->
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="#">Looking For Blood</a></li>
+            <li><a href="#">Want to Donate Blood</a></li>
+        </ul>
+    </nav>
+    
+    <br/>
+    <main>
+        <!-- First div for search -->
+         <div class="Blood-stock">
+            <h1>Nearest Blood Bank/ Blood Storage Unit</h1>
+         </div>
+        <div class="search-container">
+            <div class="search-form">
+                <h2>Search Blood Bank</h2>
+                <div class="form-fields">
+                    <label for="stateSelected">State:</label>
+                    <select name="State" id="stateSelected">
+                        <option value="SelectState">Select State</option>
+                        <option value="AndamanandNicobarIslands">Andaman and Nicobar Islands</option>
+                        <option value="AndhraPradesh">Andhra Pradesh</option>
+                        <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="DadraandNagarHaveliandDamanandDiu">Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="HimachalPradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="MadhyaPradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="TamilNadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="UttarPradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="WestBengal">West Bengal</option>
+                    </select>                    
+    
+                    <label for="district">District:</label>
+                    <select name="District" id="district">
+                        <option value="SelectDistrict">Select District</option>
+                        <option value="Dummy">Dummy</option>
+                        <!-- Add more options -->
+                    </select>
+    
+                    <label for="Blood_Bank">Blood Bank:</label>
+                    <input type="text" placeholder="Blood Bank or Hospital">
+
+                </div>
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+        </div>
+    
+        <!-- Second div for instructions and table -->
+        <div class="instructions-container">
+            <h2>List Of Searched Blood Bank</h2>
+            <p>Showing Blood Banks/ Blood Storage Units as per the selection from the list</p>
+    
+            <!-- Here a div will be inserted by js when search-btn is clicked -->
+        </div>
+    </main>
+    <br/>
+
+    <footer>
+        
+        <div class="mainf">
+            <div class="f">
+                <div class="f1">
+                    <h3>Looking for Blood</h3>
+                    <p><a href="#" class="flink">Blood Availability</a></p>
+                    <p><a href="#" class="flink">Blood Bank Directory</a></p>
+                    <p><a href="#" class="flink">Thalassemia Request</a></p>
+                </div>
+                <div class="f1">
+                    <h3>Want to Donate Blood</h3>
+                    <p><a href="#" class="flink">Blood Donation Camps</a></p>
+                    <p><a href="#" class="flink">Donor Login</a></p>
+                </div>
+                <div class="f1">
+                    <h3>Blood Bank Login</h3>
+                    <p><a href="#" class="flink">Login</a></p>
+                    <p><a href="#" class="flink">Add your Blood Bank</a></p>
+                </div>
+                <div class="f1">
+                    <h3>About Us</h3>
+                    <p><a href="#" class="flink">Notifications</a></p>
+                    <p><a href="#" class="flink">Know about Us</a></p>
+                    <p><a href="#" class="flink">Contact Us</a></p>
+                </div>
+            </div>
+            <div class="images">
+                <img id="img1" src="assets/footer1.png" alt="initiative">
+                <img id="img2" src="assets/footer2.png" alt="2nd">
+                <img id="img3" src="assets/footer3.jpg" alt="3rd">
+                <img id="img4" src="assets/footer4.png" alt="4th">
+                <img id="img5" src="assets/footer5.png" alt="5th">
+            </div>
+            <div class="Last">
+                <a class="Llink" href="#">Terms & Conditions</a> | <a class="Llink" href="#">Privacy Policy</a> | <a class="Llink" href="#">Accessibility Statement</a> | Last Updated : Dec 20 2024 | <a class="Llink" href="#">Site Map</a>
+            </div>
+        </div>
+    </footer>
+    <script src="Blood_Bank_Directory.js"></script>
+</body>
+</html>
