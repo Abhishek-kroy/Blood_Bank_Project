@@ -1,3 +1,16 @@
+window.addEventListener("DOMContentLoaded", () => {
+    const userNameSpan = document.getElementById("userName");
+    console.log("User element:", userNameSpan); // Check if element is found
+    const storedFname = localStorage.getItem("fname");
+    console.log("Stored fname:", storedFname); // Check if fname is in localStorage
+
+    if (storedFname && userNameSpan) {
+        userNameSpan.textContent = storedFname; // Update username dynamically
+    } else {
+        userNameSpan.textContent = "Guest"; // Default value
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const donationItems = document.querySelectorAll('#donationList li');
     donationItems.forEach(item => {

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Sign-up - Life Flow</title>
+    <link rel="stylesheet" href="DonorSignUp.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <h2>Donor Sign-up</h2>
+        </div>
+        <form id="signup-form">
+            <label for="Fname">First Name</label>
+            <input type="text" id="Fname" name="Fname" placeholder="Enter your first name" required>
+
+            <label for="Lname">Last Name</label>
+            <input type="text" id="Lname" name="Lname" placeholder="Enter your last name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="blood-group">Blood Group</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="">Select your blood group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="DonorLogin.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="DonorSignUp.js"></script>
+</body>
+</html>

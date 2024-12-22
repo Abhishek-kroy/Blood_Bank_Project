@@ -28,9 +28,10 @@ async function fetchBloodBanks(state, district, bloodBank) {
             throw new Error("Network response was not ok");
         }
         const data = await response.json();
+        console.log(data);
         
         // Handle successful API response
-        displayBloodBanks(data);
+        displayBloodBanks(state,district,bloodBank,data);
     } catch (error) {
         // Handle errors
         console.error("There was a problem with the fetch operation:", error);
@@ -38,12 +39,12 @@ async function fetchBloodBanks(state, district, bloodBank) {
     }
 }
 
-function displayBloodBanks(bloodBanks) {
+function displayBloodBanks(state,district,bloodBank,bloodBanks) {
     const instructionsContainer = document.querySelector(".instructions-container");
 
     // Clear previous results
     instructionsContainer.innerHTML = `<h2>List Of Searched Blood Banks</h2>
-                                       <p>Showing Blood Banks/ Blood Storage Units for <strong>${bloodBanks.state}</strong> - <strong>${bloodBanks.district}</strong></p>`;
+                                       <p>Showing Blood Banks/ Blood Storage Units for  <strong>${ state}</strong> - <strong>${district}</strong></p>`;
 
     // Check if there are any results
     if (bloodBanks.length > 0) {
@@ -54,9 +55,11 @@ function displayBloodBanks(bloodBanks) {
 
             // Add the blood bank details inside the div
             bloodBankDiv.innerHTML = `
-                <h3>${bank.name}</h3>
-                <p><strong>Contact:</strong> ${bank.contact}</p>
-                <p><strong>Address:</strong> ${bank.address}</p>
+                <h3>${bank.b_first_name}   ${bank.b_last_name}</h3>
+                <p><strong>Contact:</strong> ${bank.contact_no}</p>
+                <p><strong>Email:</strong> ${bank.email}</p>
+                <p><strong>Address:</strong> ${bank.state} ${bank.district} ${bank.city}</p>
+                <p><strong>Type:</strong> ${bank.type}</p>
             `;
 
             // Append the blood bank div to the instructions container

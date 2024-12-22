@@ -102,6 +102,36 @@ nav ul li a:hover::after {
     width: 100%; /* Full underline */
 }
 
+.user-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#userSection {
+    position: relative;
+    left: 16%;
+    display: flex;
+    align-items: center;
+}
+
+#userSection a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#userSection a:hover {
+    background-color: #f5f5f5;
+}
+
 /* Section Styling */
 main {
     max-width: 1200px;
