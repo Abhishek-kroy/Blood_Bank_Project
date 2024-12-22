@@ -1,39 +1,45 @@
-// models/users.js
 const { Sequelize, DataTypes } = require('sequelize');
-const {sequelize} = require('../config/database'); // Ensure the path to your database configuration is correct
+const { sequelize } = require('../config/database');
 
-// Define the User model
 const User = sequelize.define('User', {
     fname: {
         type: DataTypes.STRING,
-        allowNull: false, // First name is required
+        allowNull: false,
     },
     lname: {
         type: DataTypes.STRING,
-        allowNull: false, // Last name is required
+        allowNull: false,
     },
-    email: {
+    address:{
         type: DataTypes.STRING,
-        allowNull: false, // Email is required
-        unique: true, // Ensure the email is unique in the database
+        allowNull: false,
     },
-    blood_group: {
+    email:{
         type: DataTypes.STRING,
-        allowNull: false, // Blood group is required
+        allowNull: false,
+        unique: true,
     },
-    password: {
+    password:{
         type: DataTypes.STRING,
-        allowNull: false, // Password is required
+        allowNull: false,
     },
+    contact_no:{
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique:true,
+    },
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 'donor', // Default value
+    }
 }, {
-    // Model options
-    tableName: 'users', // The name of the table in the database
-    timestamps: false, // Adds createdAt and updatedAt fields automatically
+    tableName: 'users',
+    timestamps: true,
 });
 
-// Sync the model with the database (ensure table exists)
 sequelize.sync()
     .then(() => console.log('User model synchronized'))
     .catch((error) => console.error('Error syncing User model:', error));
 
-module.exports = { User }; // Export the User model for use in other files
+module.exports = { User };

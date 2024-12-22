@@ -4,14 +4,19 @@ const { User } = require('../models/users');
 
 const signUp = async (req, res) => {
     console.log(req.body);
-    const { fname, lname, email,blood_group, password} = req.body;
+    const { fname, lname, address, email,  password, contact_no, type } = req.body; // Added 'type' in request body
 
     try {
-
         // Check if user already exists
         const existingUser = await User.findOne({ where: { email } });
         if (existingUser) {
             return res.status(400).json({ message: "Email already in use" });
+        }
+
+        // Validate the user type
+        const validTypes = ['donor', 'recipient', 'admin']; // Allowed types
+        if (!validTypes.includes(type)) {
+            return res.status(400).json({ message: "Invalid user type" });
         }
 
         // Hash the password
@@ -21,15 +26,16 @@ const signUp = async (req, res) => {
         const user = await User.create({
             fname,
             lname,
-            blood_group,
+            address,
             email,
             password: hashedPassword,
-            confirm_password: hashedPassword
+            contact_no,
+            type
         });
 
         res.status(201).json({ message: "User created successfully", user });
     } catch (error) {
-        console.error("Error during sign-up:", error); // This will log the complete error stack
+        console.error("Error during sign-up:", error); // Logs the complete error stack
         res.status(500).json({ message: "Server error", error });
     }
 };

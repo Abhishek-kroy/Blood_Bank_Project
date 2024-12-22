@@ -44,6 +44,34 @@ input[type="password"] {
     border-radius: 5px;
     font-size: 16px;
 }
+/* Style for the label */
+label[for="type"] {
+    font-size: 1rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the label text bold */
+    color: #333; /* Sets a dark color for the label */
+    display: block; /* Makes the label take full width */
+    margin-bottom: 0.5rem; /* Adds some space below the label */
+}
+
+/* Style for the select element */
+select#type {
+    width: 100%; /* Ensures the select element takes full width of its parent */
+    padding: 0.75rem; /* Adds padding inside the select box */
+    font-size: 1rem; /* Sets font size for options */
+    border: 1px solid #ccc; /* Adds a border */
+    border-radius: 4px; /* Rounds the corners of the select box */
+    transition: border-color 0.3s ease; /* Adds a transition effect for border color */
+}
+
+
+
+/* Style for the option elements */
+select#type option {
+    padding: 0.5rem; /* Adds padding inside the options */
+    background-color: #fff; /* White background for options */
+}
+
+
 
 button {
     background-color: #c62828;

@@ -4,11 +4,12 @@ document.getElementById("signup-form").addEventListener("submit", async (event) 
     // Fetch input values
     const fname = document.getElementById("Fname").value.trim();
     const lname = document.getElementById("Lname").value.trim();
+    const address = document.getElementById("address").value.trim();
     const email = document.getElementById("email").value.trim();
-    const blood_group = document.getElementById("blood-group").value;
+    const contact_no = document.getElementById("contact-number").value.trim();
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("confirm-password").value.trim();
-
+    const type = document.getElementById("type").value;
     // Check if passwords match
     if (password !== confirmPassword) {
         alert("Passwords do not match.");
@@ -24,9 +25,11 @@ document.getElementById("signup-form").addEventListener("submit", async (event) 
             body: JSON.stringify({
                 fname,
                 lname,
+                address,
                 email,
-                blood_group,
-                password
+                password,
+                contact_no,
+                type
             }),
         });
 
@@ -34,7 +37,7 @@ document.getElementById("signup-form").addEventListener("submit", async (event) 
 
         if (response.ok) {
             alert("Sign-up Successful!");
-            window.location.href = "DonorLogin.html"; // Redirect to login page
+            window.location.href = "Home.html"; // Redirect to login page
         } else {
             console.error("Error during sign-up:", data); // Log the error message
             alert(data.message || "Sign-up Failed! Please try again.");

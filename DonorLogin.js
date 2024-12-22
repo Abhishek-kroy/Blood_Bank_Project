@@ -5,6 +5,7 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
     const userNameSpan = document.getElementById("userName");
 
     const email = document.getElementById("email").value;
+    const type = document.getElementById("type").value;
     const password = document.getElementById("password").value;
 
     try {
@@ -13,7 +14,7 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ email, type,  password }),
         });
 
         const data = await response.json();
@@ -25,6 +26,7 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
             // Save token and first name
             localStorage.setItem("token", data.token);
             localStorage.setItem("fname", data.fname);
+            localStorage.setItem("type", data.type);
 
             // Update username dynamically
             if (userNameSpan) {
