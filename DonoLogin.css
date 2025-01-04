@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    color: #c62828;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* Style for the label */
+label[for="type"] {
+    font-size: 1rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the label text bold */
+    color: #333; /* Sets a dark color for the label */
+    display: block; /* Makes the label take full width */
+    margin-bottom: 0.5rem; /* Adds some space below the label */
+}
+
+/* Style for the select element */
+select#type {
+    width: 100%; /* Ensures the select element takes full width of its parent */
+    padding: 0.75rem; /* Adds padding inside the select box */
+    font-size: 1rem; /* Sets font size for options */
+    border: 1px solid #ccc; /* Adds a border */
+    border-radius: 4px; /* Rounds the corners of the select box */
+    transition: border-color 0.3s ease; /* Adds a transition effect for border color */
+}
+
+
+
+/* Style for the option elements */
+select#type option {
+    padding: 0.5rem; /* Adds padding inside the options */
+    background-color: #fff; /* White background for options */
+}
+
+
+
+button {
+    background-color: #c62828;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
