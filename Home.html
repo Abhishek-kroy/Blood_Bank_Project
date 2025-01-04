@@ -8,33 +8,42 @@
     <link href="Home.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="animate-on-scroll">
         <div class="header-container">
-            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo">
-            <div class="header-text">
+            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo animate-on-scroll">
+            <div class="header-text animate-on-scroll">
                 <h1>Life Flow: Saving Lives Together</h1>
                 <h1 lang="hi">जीवन की धारा: मिलकर जीवन बचाना</h1> <!-- Hindi added with lang attribute -->
             </div>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="#">Looking For Blood</a></li>
-            <li><a href="#">Want to Donate Blood</a></li>
-            <li id="userSection">
+    <nav class="animate-on-scroll">
+        <div>
+            <ul>
+                <li class="animate-on-scroll"><a href="Home.html">Home</a></li>
+                <li class="animate-on-scroll"><a href="AboutUs.html">About Us</a></li>
+                <li class="animate-on-scroll"><a href="#">Looking For Blood</a></li>
+                <li class="animate-on-scroll"><a href="#">Want to Donate Blood</a></li> 
+            </ul>
+        </div>
+        <!-- 
                 <a href="DonorLogin.html" id="userLink">
                     <img src="assets/user_default.jpeg" alt="User Icon" class="user-logo">
                     <span id="userName">Guest</span>
                 </a>
-            </li>  
-        </ul>
+            </li>   -->
+        <div id="userSection">
+            <a href="DonorLogin.html" id="userLink">
+                <img src="assets/user_default.jpeg" alt="User Icon" class="user-logo">
+                <span id="userName">Guest</span>
+            </a>
+        </li>  
+        </div>
     </nav>
     <br/>
     <main>
-        <section class="stats">
-            <div class="box-container">
+        <div class="stats animate-on-scroll">
+            <div class="box-container animate-on-scroll">
                 <div class="box left">
                     <p class="big-number">0</p>
                     <p>Donors Registered</p>
@@ -44,119 +53,128 @@
                     <p>Blood Units Collected</p>
                 </div>
             </div>
-            <div class="last-update">
+            <div class="last-update animate-on-scroll">
                 <span>Data from 20 DEC 2024 onwards:</span> Last update: 2024-12-20 14:22:09
             </div>
-        </section>
+        </div>
         
-        <section class="links">
-            <div class="link-item"><a href="Blood_Availability_Search.html">Blood Availability Search</a></div>
-            <div class="link-item"><a href="Blood_Bank_Directory.html">Blood Bank Directory</a></div>
-            <div class="link-item"><a href="#">Blood Donation Camps</a></div>
-            <div class="link-item"><a href="#">Donor Login</a></div>
-            <div class="link-item"><a href="#">Register Voluntary Blood Camp</a></div>
-        </section>
+            
+        <div class="links animate-on-scroll">
+            <div class="link-item animate-on-scroll"><a href="Blood_Availability_Search.html">Blood Availability Search</a></div>
+            <div class="link-item animate-on-scroll"><a href="Blood_Bank_Directory.html">Blood Bank Directory</a></div>
+            <div class="link-item animate-on-scroll"><a href="#">Blood Donation Camps</a></div>
+            <div class="link-item animate-on-scroll"><a href="#">Donor Login</a></div>
+            <div class="link-item fanimate-on-scroll"><a href="#">Register Voluntary Blood Camp</a></div>
+        </div>
 
-        <section class="donation-info">
-            <div class="info-box">
-                <h2>Learn About Donation</h2>
-                <div class="Donation-info-box">
-                    <img src="assets/Learn_About_Donation.jpeg" alt="Blood donation" id="Learn_About_Donation">
-                    <p>The process of donating blood is a safe and simple way to help others in need. Blood donation not only saves lives but also supports the community by ensuring a steady supply for hospitals and clinics. After donation, your body works to replenish the blood, stimulating the production of fresh blood cells and promoting good health. It's an act of kindness that can make a real difference in someone's life.</p>
-                </div>
-            </div>            
+        <div class="blood_donation">
 
-            <div class="info-box">
-                <h2>Compatible Blood Type Donors</h2>
-                <table>
-                    <tr>
-                        <th>Blood Type</th>
-                        <th>Donate Blood to</th>
-                        <th>Receive Blood From</th>
-                    </tr>
-                    <tr>
-                        <td>A+</td>
-                        <td>A+, AB+</td>
-                        <td>A+, A-, O+, O-</td>
-                    </tr>
-                    <tr>
-                        <td>O+</td>
-                        <td>O+, A+, B+, AB+</td>
-                        <td>O+, O-</td>
-                    </tr>
-                    <tr>
-                        <td>B+</td>
-                        <td>B+, AB+</td>
-                        <td>B+, B-, O+, O-</td>
-                    </tr>
-                    <tr>
-                        <td>AB+</td>
-                        <td>AB+</td>
-                        <td>All blood types</td>
-                    </tr>
-                    <tr>
-                        <td>A-</td>
-                        <td>A+, A-, AB+, AB-</td>
-                        <td>A-, O-</td>
-                    </tr>
-                    <tr>
-                        <td>O-</td>
-                        <td>All blood types</td>
-                        <td>O-</td>
-                    </tr>
-                    <tr>
-                        <td>B-</td>
-                        <td>B+, B-, AB+, AB-</td>
-                        <td>B-, O-</td>
-                    </tr>
-                    <tr>
-                        <td>AB-</td>
-                        <td>AB+, AB-</td>
-                        <td>All blood types except AB+</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="info-box">
-                <div class="section-header"><p>TYPES OF DONATION</p></div>
-                <div class="section-description">
-                    <p>The average human body contains about five liters of blood, which is made of several cellular and non-cellular components such as <strong>blood cell, Platelet, and Plasma.</strong></p>
-                    <p>Each type of component has its unique properties and can be used for different indications. The donated blood is separated into these components by the blood centre and one donated unit can save upto four lives depending on the number of components separated from your blood.</p>
-                </div>
-                <div>
-                    <ul id="donationList">
-                        <li>Packed Red Blood Cells</li>
-                        <li>Plasma</li>
-                        <li>Platelet</li>
-                    </ul>
-                    <fieldset>
-                        <div class="WhatIsIt">
-                            <div class="What Is It">What Is It?</div>
-                            <div class="info-description">Information about what it is...</div>
-                        </div>
-                        <div class="WhoCanDonate">
-                            <div class="info-name">Who Can Donate?</div>
-                            <div class="info-description">Information about who can donate...</div>
-                        </div>
-                        <div class="UserFor">
-                            <div class="info-name">User For</div>
-                            <div class="info-description">Information about who uses it...</div>
-                        </div>
-                        <div class="LastsFor">
-                            <div class="info-name">Lasts For</div>
-                            <div class="info-description">Information about how long it lasts...</div>
-                        </div>
-                        <div class="HowLongDoesItTakeToDonate">
-                            <div class="info-name">How Long Does It Take To Donate?</div>
-                            <div class="info-description">Information about how long the donation process takes...</div>
-                        </div>
-                        <div class="HowOftenCanIDonate">
-                            <div class="info-name">How Often Can I Donate?</div>
-                            <div class="info-description">Information about donation frequency...</div>
-                        </div>
-                    </fieldset>
+            <div class="donation-info Learn_About_Donation animate-on-scroll">
+                <div class="donation-info Learn_About_Donation info-box animate-on-scroll">
+                    <h2>Learn About Donation</h2>
+                    <div class="Donation-info-box">
+                        <img src="assets/Learn_About_Donation.jpeg" alt="Blood donation" class="Learn_About_Donation">
+                        <p id="typewriter-text"></p>
+                    </div>
+                </div>            
+            </div>           
+            
+        
+            <div class="donation-info">
+                <div class="info-box animate-on-scroll Learn_About_Donation">
+                    <h2>Compatible Blood Type Donors</h2>
+                    <table>
+                        <tr>
+                            <th>Blood Type</th>
+                            <th>Donate Blood to</th>
+                            <th>Receive Blood From</th>
+                        </tr>
+                        <tr>
+                            <td>A+</td>
+                            <td>A+, AB+</td>
+                            <td>A+, A-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O+</td>
+                            <td>O+, A+, B+, AB+</td>
+                            <td>O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>B+</td>
+                            <td>B+, AB+</td>
+                            <td>B+, B-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>AB+</td>
+                            <td>AB+</td>
+                            <td>All blood types</td>
+                        </tr>
+                        <tr>
+                            <td>A-</td>
+                            <td>A+, A-, AB+, AB-</td>
+                            <td>A-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O-</td>
+                            <td>All blood types</td>
+                            <td>O-</td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td>B+, B-, AB+, AB-</td>
+                            <td>B-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>AB-</td>
+                            <td>AB+, AB-</td>
+                            <td>All blood types except AB+</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-        </section>           
+        </div>
+        
+        <div class="donation-info info-box types_of_donation animate-on-scroll">
+            <div class="section-header"><p>TYPES OF DONATION</p></div>
+            <div class="section-description">
+                <p>The average human body contains about five liters of blood, which is made of several cellular and non-cellular components such as <strong>blood cell, Platelet, and Plasma.</strong></p>
+                <p>Each type of component has its unique properties and can be used for different indications. The donated blood is separated into these components by the blood centre and one donated unit can save upto four lives depending on the number of components separated from your blood.</p>
+            </div>
+            <div class="animate-on-scroll">
+                <ul id="donationList">
+                    <li>Packed Red Blood Cells</li>
+                    <li>Plasma</li>
+                    <li>Platelet</li>
+                </ul>
+                <fieldset>
+                    <div class="WhatIsIt">
+                        <div class="What Is It">What Is It?</div>
+                        <div class="info-description">Information about what it is...</div>
+                    </div>
+                    <div class="WhoCanDonate">
+                        <div class="info-name">Who Can Donate?</div>
+                        <div class="info-description">Information about who can donate...</div>
+                    </div>
+                    <div class="UserFor">
+                        <div class="info-name">User For</div>
+                        <div class="info-description">Information about who uses it...</div>
+                    </div>
+                    <div class="LastsFor">
+                        <div class="info-name">Lasts For</div>
+                        <div class="info-description">Information about how long it lasts...</div>
+                    </div>
+                    <div class="HowLongDoesItTakeToDonate">
+                        <div class="info-name">How Long Does It Take To Donate?</div>
+                        <div class="info-description">Information about how long the donation process takes...</div>
+                    </div>
+                    <div class="HowOftenCanIDonate">
+                        <div class="info-name">How Often Can I Donate?</div>
+                        <div class="info-description">Information about donation frequency...</div>
+                    </div>
+                </fieldset>
+            </div>
+        </div> 
+
     </main>
     <br/>
     <footer>

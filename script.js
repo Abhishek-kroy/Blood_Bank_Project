@@ -71,3 +71,68 @@ function handleClick(donationType) {
             break;
     }
 }
+
+const textElement = document.getElementById('typewriter-text');
+const texts = [
+    "The process of donating blood is a safe and simple way to help others in need. Blood donation not only saves lives but also supports the community by ensuring a steady supply for hospitals and clinics. After donation, your body works to replenish the blood, stimulating the production of fresh blood cells and promoting good health. It's an act of kindness that can make a real difference in someone's life.",
+    "Blood donation plays a crucial role in maintaining a healthy supply of blood for those in need. It ensures that hospitals and clinics have enough resources to treat patients in emergencies, surgeries, and chronic illnesses. By donating blood, you contribute to saving lives and supporting the well-being of your community.",
+    "When you donate blood, you're not only helping others but also promoting your own health. Blood donation can reduce the risk of certain diseases and improve cardiovascular health. It's an easy way to give back and make a meaningful impact in your community while benefiting your own body."
+];
+
+let index = 0;
+let wordIndex = 0;
+const words = texts[index].split(' ');
+
+function typeWriter() {
+    if (wordIndex < words.length) {
+        textElement.innerHTML += words[wordIndex] + ' ';
+        wordIndex++;
+        setTimeout(typeWriter, 100); // Delay between words
+    } else {
+        textElement.classList.remove('blink-cursor'); // Remove cursor when finished typing
+        setTimeout(removeWord, 1500); // Wait before starting to remove words
+    }
+}
+
+function removeWord() {
+    if (wordIndex > 0) {
+        // Remove one word at a time
+        textElement.innerHTML = textElement.innerHTML.slice(0, -words[wordIndex - 1].length - 1);
+        wordIndex--;
+        setTimeout(removeWord, 100); // Delay before removing the next word
+    } else {
+        // After removing all words, load the next text
+        setTimeout(switchText, 500);
+    }
+}
+
+function switchText() {
+    index = (index + 1) % texts.length; // Cycle through the texts
+    wordIndex = 0; // Reset word index
+    words.length = 0; // Clear words array
+    words.push(...texts[index].split(' ')); // Get next text
+    textElement.classList.add('blink-cursor'); // Add the blinking cursor
+    typeWriter(); // Start typing the next text
+}
+
+// Start the typing effect on page load
+window.onload = () => {
+    textElement.classList.add('blink-cursor');
+    typeWriter();
+};
+
+document.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.animate-on-scroll'); // Select all elements with this class
+    const triggerHeight = window.innerHeight * 0.75; // Trigger when 75% visible
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        // Add class 'visible' when the element is in view
+        if (elementTop < triggerHeight) {
+            element.classList.add('visible');
+        } else {
+            element.classList.remove('visible');
+        }
+    });
+});
