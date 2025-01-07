@@ -9,13 +9,15 @@ const router = require('./routes/routes.js');
 // Initialize express app
 const app = express();
 app.use(express.json());
-app.use(cors());
 
 // Import the routes
 app.use('/api/v1', router);  // Use the routes with a base URL of /api/v1
 
 app.use(cors({
-    origin: "http://127.0.0.1:5500", // Allow frontend origin
+    origin: [
+        "http://127.0.0.1:5500",  // Local testing
+        "https://bloodbankforproject.netlify.app", // Netlify frontend
+    ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 }));
