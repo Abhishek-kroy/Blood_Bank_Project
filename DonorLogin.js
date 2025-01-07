@@ -37,10 +37,10 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
 
             // Redirect to home page
             if(type=='donor'){
-                window.location.href = "Home.html";
+                window.location.href = "index.html";
             }
             else if(type=='doctor'){
-                window.location.href = "Home.html";
+                window.location.href = "index.html";
             }
             else{
                 window.location.href = "Admin.html";
