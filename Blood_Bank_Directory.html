@@ -1,145 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank Directory</title>
+    <title>LIFE FLOW</title>
     <link rel="icon" href="assets/Blood_Bank_Favicon.webp" type="image/webp">
-    <link rel="stylesheet" href="Blood_Bank_Directory.css">
+    <!-- <link href="Home.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo">
-            <div class="header-text">
-                <h1>Life Flow: Saving Lives Together</h1>
-                <h1 lang="hi">जीवन की धारा: मिलकर जीवन बचाना</h1> <!-- Hindi added with lang attribute -->
-            </div>
+    <nav class="flex justify-between items-center bg-red-600 p-4">
+        <!-- Logo and Title Section -->
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-tint text-white text-4xl"></i>
+            <p class="text-3xl font-semibold text-white">Life Flow</p>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="#">Looking For Blood</a></li>
-            <li><a href="#">Want to Donate Blood</a></li>
-        </ul>
+
+        <!-- Navigation Links Section -->
+        <ul class="flex space-x-6">
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-home text-white"></i>
+                <a href="Home.html" class="text-white text-lg font-medium hover:text-red-200 transition-colors">Home</a>
+            </li>
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-info-circle text-white"></i>
+                <a href="AboutUs.html" class="text-white text-lg font-medium hover:text-red-200 transition-colors">About
+                    Us</a>
+            </li>
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-search text-white"></i>
+                <a href="/Blood_Availability_Search.html"
+                    class="text-white text-lg font-medium hover:text-red-200 transition-colors">Looking For
+                    Blood</a>
+            </li>
+            <div id="userSection" class="flex items-center space-x-3">
+                <a href="DonorLogin.html" id="userLink"
+                    class="flex items-center space-x-2 text-white hover:text-red-200 transition-colors">
+                    <img src="assets/user_default.jpeg" alt="User Icon"
+                        class="user-logo w-8 h-8 rounded-full border-2 border-white">
+                    <span id="userName">Guest</span>
+                </a>
+            </div>
     </nav>
-    
-    <br/>
-    <main>
-        <!-- First div for search -->
-         <div class="Blood-stock">
-            <h1>Nearest Blood Bank/ Blood Storage Unit</h1>
-         </div>
-        <div class="search-container">
-            <div class="search-form">
-                <h2>Search Blood Bank</h2>
-                <div class="form-fields">
-                    <label for="stateSelected">State:</label>
-                    <select name="State" id="stateSelected">
-                        <option value="SelectState">Select State</option>
-                        <option value="AndamanandNicobarIslands">Andaman and Nicobar Islands</option>
-                        <option value="AndhraPradesh">Andhra Pradesh</option>
-                        <option value="ArunachalPradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="DadraandNagarHaveliandDamanandDiu">Dadra and Nagar Haveli and Daman and Diu</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="HimachalPradesh">Himachal Pradesh</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Ladakh">Ladakh</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="MadhyaPradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Puducherry">Puducherry</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="TamilNadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="UttarPradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="WestBengal">West Bengal</option>
-                    </select>                    
-    
-                    <label for="district">District:</label>
-                    <select name="District" id="district">
-                        <option value="SelectDistrict">Select District</option>
-                        <option value="Dummy">Dummy</option>
-                        <!-- Add more options -->
-                    </select>
-    
-                    <label for="Blood_Bank">Blood Bank:</label>
-                    <input type="text" placeholder="Blood Bank or Hospital">
+    <div class="text-center mb-6 mt-3">
+        <h1 class="text-3xl font-bold text-red-600 flex items-center justify-center">
+            <i class="fas fa-tint mr-2"></i> Nearest Blood Bank/Storage Unit
+        </h1>
+    </div>
 
-                </div>
-                <button class="search-btn" id="search-btn">Search</button>
+    <div class="bg-white shadow-lg rounded-lg p-6 mb-6 mx-4">
+        <h2 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-search text-red-500 mr-2"></i> Search Blood Stock
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label for="stateSelected" class="block text-gray-700 font-medium">State:</label>
+                <select id="stateSelected" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="">Select State</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="district" class="block text-gray-700 font-medium">District:</label>
+                <select id="district" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="">Select District</option>
+                    <option value="Example">Example</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bloodgroups" class="block text-gray-700 font-medium">Blood Group:</label>
+                <select id="bloodgroups" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="">All Blood Groups</option>
+                    <option value="A+">A+</option>
+                    <option value="O+">O+</option>
+                </select>
             </div>
         </div>
-    
-        <!-- Second div for instructions and table -->
-        <div class="instructions-container">
-            <h2>List Of Searched Blood Bank</h2>
-            <p>Showing Blood Banks/ Blood Storage Units as per the selection from the list</p>
-    
-            <!-- Here a div will be inserted by js when search-btn is clicked -->
-        </div>
-    </main>
-    <br/>
 
-    <footer>
-        
-        <div class="mainf">
-            <div class="f">
-                <div class="f1">
-                    <h3>Looking for Blood</h3>
-                    <p><a href="#" class="flink">Blood Availability</a></p>
-                    <p><a href="#" class="flink">Blood Bank Directory</a></p>
-                    <p><a href="#" class="flink">Thalassemia Request</a></p>
+        <div class="text-center mt-4">
+            <button id="search-btn" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 shadow-md">
+                <i class="fas fa-search mr-2"></i> Search
+            </button>
+        </div>
+    </div>
+
+    <!-- Second div for instructions and table -->
+    <div class="bg-white shadow-lg rounded-lg p-6 mx-4 mb-2">
+        <h2 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-list-alt mr-2"></i> List Of Searched Blood Banks
+        </h2>
+        <p class="text-gray-600 mb-4">Showing Blood Banks/ Blood Storage Units as per the selection from the list.</p>
+
+        <!-- Table to Display Results -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border border-gray-300 p-2">S. No.</th>
+                        <th class="border border-gray-300 p-2">Blood Bank</th>
+                        <th class="border border-gray-300 p-2">Availability</th>
+                        <th class="border border-gray-300 p-2">Last Update</th>
+                        <th class="border border-gray-300 p-2">Type</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTable">
+                    <tr class="hover:bg-gray-100">
+                        <td class="border border-gray-300 p-2">1</td>
+                        <td class="border border-gray-300 p-2">Example Blood Bank</td>
+                        <td class="border border-gray-300 p-2">Available</td>
+                        <td class="border border-gray-300 p-2">2024-12-20</td>
+                        <td class="border border-gray-300 p-2">O+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12 w-full">
+        <div class="px-6 sm:px-12">
+            <!-- Footer Main Sections -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Home.html" class="text-blue-400 hover:text-blue-600">Home</a></li>
+                        <li><a href="Blood_Availability_Search.html" class="text-blue-400 hover:text-blue-600">Blood Availability</a></li>
+                        <li><a href="Blood_Bank_Directory.html" class="text-blue-400 hover:text-blue-600">Blood Bank Directory</a></li>
+                        <li><a href="Blood_Donation_Camps.html" class="text-blue-400 hover:text-blue-600">Donate Now</a></li>
+                        <li><a href="contactUs.html" class="text-blue-400 hover:text-blue-600">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div class="f1">
-                    <h3>Want to Donate Blood</h3>
-                    <p><a href="#" class="flink">Blood Donation Camps</a></p>
-                    <p><a href="#" class="flink">Donor Login</a></p>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul>
+                        <li class="text-sm">Email: <a href="mailto:support@example.com"
+                                class="text-blue-400 hover:text-blue-600">support@example.com</a></li>
+                        <li class="text-sm">Phone: <a href="tel:+1234567890"
+                                class="text-blue-400 hover:text-blue-600">+1 (234) 567-890</a></li>
+                        <li class="text-sm">Address: 123 Street, City, Country</li>
+                    </ul>
                 </div>
-                <div class="f1">
-                    <h3>Blood Bank Login</h3>
-                    <p><a href="#" class="flink">Login</a></p>
-                    <p><a href="#" class="flink">Add your Blood Bank</a></p>
+
+                <!-- Follow Us -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="f1">
-                    <h3>About Us</h3>
-                    <p><a href="#" class="flink">Notifications</a></p>
-                    <p><a href="#" class="flink">Know about Us</a></p>
-                    <p><a href="#" class="flink">Contact Us</a></p>
+
+                <!-- Legal Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Privacy Policy</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Accessibility</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="images">
-                <img id="img1" src="assets/footer1.png" alt="initiative">
-                <img id="img2" src="assets/footer2.png" alt="2nd">
-                <img id="img3" src="assets/footer3.jpg" alt="3rd">
-                <img id="img4" src="assets/footer4.png" alt="4th">
-                <img id="img5" src="assets/footer5.png" alt="5th">
-            </div>
-            <div class="Last">
-                <a class="Llink" href="#">Terms & Conditions</a> | <a class="Llink" href="#">Privacy Policy</a> | <a class="Llink" href="#">Accessibility Statement</a> | Last Updated : Dec 20 2024 | <a class="Llink" href="#">Site Map</a>
+
+            <!-- Footer Bottom Section -->
+            <div class="mt-8 border-t border-gray-600 pt-6 text-center text-sm">
+                <p>&copy; 2025 LIFE FLOW Pvt Ltd. All rights reserved.</p>
+                <p class="text-gray-400">Last Updated: Jan 6, 2025</p>
             </div>
         </div>
     </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="Blood_Bank_Directory.js"></script>
 </body>
+
 </html>

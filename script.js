@@ -11,8 +11,9 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    const donationItems = document.querySelectorAll('#donationList li');
+    const donationItems = document.querySelectorAll('.donation-item');
     donationItems.forEach(item => {
         item.addEventListener('click', function () {
             const donationType = item.textContent.trim();
@@ -117,7 +118,6 @@ function switchText() {
 
 // Start the typing effect on page load
 window.onload = () => {
-    textElement.classList.add('blink-cursor');
     typeWriter();
 };
 

@@ -4,6 +4,7 @@ const cors = require('cors');
 const express = require('express');
 const { dbConnect } = require('./config/database');
 const Blood = require('./models/blood'); // Import the Blood model
+const router = require('./routes/routes.js');
 
 // Initialize express app
 const app = express();
@@ -11,13 +12,12 @@ app.use(express.json());
 app.use(cors());
 
 // Import the routes
-const router = require('./routes/routes.js');
 app.use('/api/v1', router);  // Use the routes with a base URL of /api/v1
 
 app.use(cors({
     origin: "http://127.0.0.1:5500", // Allow frontend origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true, // Allow credentials (cookies, headers, etc.)
+    credentials: true,
 }));
 
 

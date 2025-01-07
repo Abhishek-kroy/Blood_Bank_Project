@@ -12,9 +12,17 @@ const signUp = async (req, res) => {
         if (existingUser) {
             return res.status(400).json({ message: "Email already in use" });
         }
+        console.log("Checking contact number...");
+        const existingUser2 = await User.findOne({ where: { contact_no: contact_no },timeout: 5000  });
+        console.log("Contact number check complete");
+        if (existingUser2) {
+            console.log('Contact number already exists.');
+            return res.status(400).json({ message: "Contact number already in use" });
+        }
+
 
         // Validate the user type
-        const validTypes = ['donor', 'recipient', 'admin']; // Allowed types
+        const validTypes = ['donor', 'doctor', 'admin']; // Allowed types
         if (!validTypes.includes(type)) {
             return res.status(400).json({ message: "Invalid user type" });
         }
