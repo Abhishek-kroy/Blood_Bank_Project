@@ -28,15 +28,23 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
             localStorage.setItem("fname", data.fname);
             localStorage.setItem("type", data.type);
 
-            // Update username dynamically
+           
             if (userNameSpan) {
-                userNameSpan.textContent = data.fname; // Update text
+                userNameSpan.textContent = data.fname;
             } else {
                 console.error("Element with ID 'userName' not found!");
             }
 
             // Redirect to home page
-            window.location.href = "Home.html";
+            if(type=='donor'){
+                window.location.href = "Home.html";
+            }
+            else if(type=='doctor'){
+                window.location.href = "Home.html";
+            }
+            else{
+                window.location.href = "Admin.html";
+            }
         } else {
             alert(data.message || "Login Failed! Please try again.");
         }

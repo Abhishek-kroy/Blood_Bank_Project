@@ -16,6 +16,8 @@ document.getElementById("signup-form").addEventListener("submit", async (event) 
         return;
     }
 
+    console.log(fname,lname,address,email,contact_no,password,type);
+
     try {
         const response = await fetch("http://localhost:3000/api/v1/signup", {
             method: "POST",
@@ -37,7 +39,16 @@ document.getElementById("signup-form").addEventListener("submit", async (event) 
 
         if (response.ok) {
             alert("Sign-up Successful!");
-            window.location.href = "Home.html"; // Redirect to login page
+            const type=window.localStorage.getItem('type');
+            if(type=='donor'){
+                window.location.href = "Home.html";
+            }
+            else if(type=='doctor'){
+                window.location.href = "Home.html";
+            }
+            else{
+                window.location.href = "Admin.html";
+            }
         } else {
             console.error("Error during sign-up:", data); // Log the error message
             alert(data.message || "Sign-up Failed! Please try again.");

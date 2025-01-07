@@ -1,123 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Blood Bank</title>
-    <link rel="stylesheet" href="AboutUs.css">
+    <title>LIFE FLOW</title>
+    <link rel="icon" href="assets/Blood_Bank_Favicon.webp" type="image/webp">
+    <!-- <link href="Home.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        svg {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-            <img src="assets/Blood_Bank_Logo.webp" alt="Donate Blood" class="logo">
-            <div class="header-text">
-                <h1>Life Flow: Saving Lives Together</h1>
-                <h1 lang="hi">जीवन की धारा: मिलकर जीवन बचाना</h1> <!-- Hindi added with lang attribute -->
-            </div>
+    <nav class="flex justify-between items-center bg-red-600 p-4">
+        <!-- Logo and Title Section -->
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-tint text-white text-4xl"></i>
+            <p class="text-3xl font-semibold text-white">Life Flow</p>
         </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="#">Looking For Blood</a></li>
-            <li><a href="#">Want to Donate Blood</a></li>
-        </ul>
+        <!-- Navigation Links Section -->
+        <ul class="flex space-x-6">
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-home text-white"></i>
+                <a href="Home.html" class="text-white text-lg font-medium hover:text-red-200 transition-colors">Home</a>
+            </li>
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-info-circle text-white"></i>
+                <a href="AboutUs.html" class="text-white text-lg font-medium hover:text-red-200 transition-colors">About
+                    Us</a>
+            </li>
+            <li class="flex items-center space-x-2">
+                <i class="fas fa-search text-white"></i>
+                <a href="/Blood_Availability_Search.html"
+                    class="text-white text-lg font-medium hover:text-red-200 transition-colors">Looking For
+                    Blood</a>
+            </li>
+            <div id="userSection" class="flex items-center space-x-3">
+                <a href="DonorLogin.html" id="userLink"
+                    class="flex items-center space-x-2 text-white hover:text-red-200 transition-colors">
+                    <img src="assets/user_default.jpeg" alt="User Icon"
+                        class="user-logo w-8 h-8 rounded-full border-2 border-white">
+                    <span id="userName">Guest</span>
+                </a>
+            </div>
     </nav>
-    <br>
+    <div class="bg-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <!-- Page Title -->
+            <h1 class="text-4xl font-semibold text-gray-800 mb-8">About Life Flow</h1>
 
-    <div class="banner">
-        <h1>About Life Flow</h1>
-    </div>
+            <!-- Introduction -->
+            <p class="text-xl text-gray-600 mb-6">
+                Life Flow is dedicated to creating a seamless and user-friendly platform that connects blood donors with
+                those in need. Our mission is to ensure that every patient has access to safe, life-saving blood
+                transfusions.
+            </p>
 
-    <div class="container">
-        <div class="header">
-            <h1>Life Flow: A Centralized Blood Bank Management System</h1>
-            <p>It was Inaugurated on 7th April 2016 by Hon'ble Minister of Health and Family Welfare, Sh. J P Nadda.</p>
+            <!-- Mission Section -->
+            <div class="bg-red-100 p-8 rounded-lg shadow-lg mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h2>
+                <p class="text-lg text-gray-700">
+                    Our mission is to encourage and simplify voluntary blood donations, ensuring that hospitals and
+                    blood banks never run out of this vital resource. We aim to create awareness, educate the public,
+                    and make blood donation accessible to all who wish to make a difference in someone's life.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-12">
+                <div class="flex flex-col justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-6" style="width: 300px; height: 400px;">
+                        <path
+                            d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" 
+                            style="fill: rgb(213, 16, 16);" />
+                    </svg>
+                </div>                                
+                <div class="flex flex-col justify-center items-center md:items-center">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">The Story Behind Life Flow</h2>
+                    <p class="text-lg text-gray-600">
+                        Life Flow was founded with one core belief in mind: that everyone should have access to
+                        life-saving blood. In response to blood shortages and inefficiencies in the donation process, we
+                        built a platform to simplify and enhance the donation experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+                    <div class="bg-red-500 text-white p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L12 22M12 2L16 6M12 2L8 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Commitment to Safety</h3>
+                    <p class="text-gray-600">We prioritize the safety of both donors and recipients. Our processes
+                        ensure that the blood is tested, handled, and stored in the safest way possible.</p>
+                </div>
+                <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+                    <div class="bg-red-500 text-white p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M6 19L18 19L18 5L6 5L6 19ZM6 19L2 15M6 19L2 23" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Convenience</h3>
+                    <p class="text-gray-600">We make it easier for people to donate blood by providing a streamlined
+                        platform that allows users to search for donation centers, schedules, and blood availability.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+                    <div class="bg-red-500 text-white p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 3L12 21M12 3L8 7M12 3L16 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Impactful</h3>
+                    <p class="text-gray-600">Every donation makes a difference. By donating blood, you’re not only
+                        helping save a life but also contributing to the health and wellbeing of your community.</p>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg mt-12">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h2>
+                <p class="text-lg text-gray-700">
+                    We envision a world where blood shortages are a thing of the past. A world where donors feel
+                    empowered and the donation process is simple, efficient, and accessible to everyone.
+                </p>
+            </div>
         </div>
-
-        <p>Life Flow enforces Drug & Cosmetic Act, National blood policy standards and guidelines ensuring proper collection & donation, effective management and monitoring the quality and quantity of the donated blood. Considering the national roll out, Life Flow has been developed with a modular and scalable approach with configurable rule-based architecture allowing customization to easily incorporate specific requirements from nationwide stakeholders.</p>
-
-        <div class="row">
-            <div class="column">
-                <h3>Objectives</h3>
-                <ul>
-                    <li>Safe and Adequate Blood Supplies</li>
-                    <li>Reduced Turnaround Time</li>
-                    <li>Preventing Wastage of Blood</li>
-                    <li>Restrict Professional Donors</li>
-                    <li>Networking of Blood Banks</li>
-                    <li>Donor Repository</li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h3>Salient Features</h3>
-                <ul>
-                    <li>Web-Based Application</li>
-                    <li>Aadhar Linkage</li>
-                    <li>Decision Support</li>
-                    <li>Enforces Guidelines</li>
-                    <li>Dashboard</li>
-                    <li>Statutory Reports</li>
-                </ul>
-            </div>
-        </div>
-
-        <p style="text-align: center;">
-            <a href="#">Click here to Download</a>
-        </p>
-
-        
-    </div>
-    <br>
-    <div class="aboutusimage">
-        <img class="aboutusimage1" src="assets/about us1.jpeg.jpg" alt="save life">
-        <img class="aboutusimage2" src="assets/aboutus2.jpeg.jpg" alt="save life">
-        <!-- <img src="assets/aboutus3.jpeg" alt="save life"> -->
     </div>
 
-    <br>
-    <br>
-    <footer>
-        
-        <div class="mainf">
-            <div class="f">
-                <div class="f1">
-                    <h3>Looking for Blood</h3>
-                    <p><a href="#" class="flink">Blood Availability</a></p>
-                    <p><a href="#" class="flink">Blood Bank Directory</a></p>
-                    <p><a href="#" class="flink">Thalassemia Request</a></p>
+
+    <footer class="bg-gray-800 text-white py-12 w-full">
+        <div class="px-6 sm:px-12">
+            <!-- Footer Main Sections -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Home.html" class="text-blue-400 hover:text-blue-600">Home</a></li>
+                        <li><a href="Blood_Availability_Search.html" class="text-blue-400 hover:text-blue-600">Blood
+                                Availability</a></li>
+                        <li><a href="Blood_Bank_Directory.html" class="text-blue-400 hover:text-blue-600">Blood Bank
+                                Directory</a></li>
+                        <li><a href="Blood_Donation_Camps.html" class="text-blue-400 hover:text-blue-600">Donate Now</a>
+                        </li>
+                        <li><a href="contactUs.html" class="text-blue-400 hover:text-blue-600">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div class="f1">
-                    <h3>Want to Donate Blood</h3>
-                    <p><a href="#" class="flink">Blood Donation Camps</a></p>
-                    <p><a href="#" class="flink">Donor Login</a></p>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul>
+                        <li class="text-sm">Email: <a href="mailto:support@example.com"
+                                class="text-blue-400 hover:text-blue-600">support@example.com</a></li>
+                        <li class="text-sm">Phone: <a href="tel:+1234567890"
+                                class="text-blue-400 hover:text-blue-600">+1 (234) 567-890</a></li>
+                        <li class="text-sm">Address: 123 Street, City, Country</li>
+                    </ul>
                 </div>
-                <div class="f1">
-                    <h3>Blood Bank Login</h3>
-                    <p><a href="#" class="flink">Login</a></p>
-                    <p><a href="#" class="flink">Add your Blood Bank</a></p>
+
+                <!-- Follow Us -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="f1">
-                    <h3>About Us</h3>
-                    <p><a href="#" class="flink">Notifications</a></p>
-                    <p><a href="#" class="flink">Know about Us</a></p>
-                    <p><a href="#" class="flink">Contact Us</a></p>
+
+                <!-- Legal Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Privacy Policy</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Accessibility</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="images">
-                <img id="img1" src="assets/footer1.png" alt="initiative">
-                <img id="img2" src="assets/footer2.png" alt="2nd">
-                <img id="img3" src="assets/footer3.jpg" alt="3rd">
-                <img id="img4" src="assets/footer4.png" alt="4th">
-                <img id="img5" src="assets/footer5.png" alt="5th">
-            </div>
-            <div class="Last">
-                <a class="Llink" href="#">Terms & Conditions</a> | <a class="Llink" href="#">Privacy Policy</a> | <a class="Llink" href="#">Accessibility Statement</a> | Last Updated : Dec 20 2024 | <a class="Llink" href="#">Site Map</a>
+
+            <!-- Footer Bottom Section -->
+            <div class="mt-8 border-t border-gray-600 pt-6 text-center text-sm">
+                <p>&copy; 2025 LIFE FLOW Pvt Ltd. All rights reserved.</p>
+                <p class="text-gray-400">Last Updated: Jan 6, 2025</p>
             </div>
         </div>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

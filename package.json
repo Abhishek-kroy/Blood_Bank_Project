@@ -1,5 +1,21 @@
 {
   "dependencies": {
     "cors": "^2.8.5"
-  }
+  },
+  "name": "bbp",
+  "version": "1.0.0",
+  "description": "The **Blood Bank Management System** is a database-driven project designed to manage and streamline the operations of a blood bank. This system allows for efficient handling of donors, recipients, blood storage, and other related entities, ensuring smooth operations and record-keeping.",
+  "main": "Blood_Availability_Search.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss build src/styles.css -o dist/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

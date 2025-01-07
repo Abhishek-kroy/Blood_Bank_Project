@@ -1,7 +1,7 @@
 const search_btn = document.getElementById("search-btn");
+console.log("search-btn :",search_btn);
 
 search_btn.addEventListener("click", async function () {
-    // debugging this handler
     console.log("Clicked");
     
     // Get selected state
@@ -38,14 +38,6 @@ search_btn.addEventListener("click", async function () {
                     <td>Dummy</td>
                     <td>Dummy</td>
                 </tr>`
-                // `
-                //     <tr>
-                //         <td>${index + 1}</td>
-                //         <td>${item.name}</td>
-                //         <td>${item.availability ? "Available" : "Not Available"}</td>
-                //         <td>${item.lastUpdate}</td>
-                //         <td>${item.bloodgroup}</td>
-                //     </tr>`;
                 tableBody.innerHTML += row;
                 console.log(row);
             });
